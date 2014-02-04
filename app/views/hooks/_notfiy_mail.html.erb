@@ -1,0 +1,71 @@
+<style>
+.box2
+{
+
+}
+#issue_lable
+{
+
+}
+#status_lable
+{
+ position: relative;
+    right: -180px;
+}
+#priority_lable
+{
+
+}
+#note_lable
+{
+
+}
+</style>
+<fieldset class="box2">
+  <legend><%=l(:field_mail_notification_peruser)%></legend>
+  <p>
+<label id="issue_lable">
+    <%= l(:label_issue_issue_changed) %>
+   <%= check_box_tag 'issue_changed', 1, @user.pref[:issue_changed] %>
+
+  </label>
+</p
+
+<p>
+<label id="status_lable" >
+  <%= l(:label_issue_status_changed) %> 
+ <% if @user.pref[:status_changed].nil? %> 
+      <%= check_box_tag 'status_changed',1, @user.pref[:status_changed]=1 %>
+<% else %>
+      <%= check_box_tag 'status_changed', 1, @user.pref[:status_changed] %>
+<%end%>
+ </label>
+</p>
+
+<p>
+  <label id="priority_lable" >
+        <%= l(:label_issue_priority_changed) %>
+<% if @user.pref[:priority_changed].nil? %> 
+        <%= check_box_tag 'priority_changed',1, @user.pref[:priority_changed]=1 %>
+<% else %>
+       <%= check_box_tag 'priority_changed', 1, @user.pref[:priority_changed] %>
+<%end%>
+
+ </label>
+</p>
+
+<p>
+  <label id="note_lable" >
+        <%= l(:label_issue_note_changed) %>
+<% if @user.pref[:note_changed].nil? %> 
+        <%= check_box_tag 'note_changed',1, @user.pref[:note_changed]=1 %>
+
+<% else %>
+   <%= check_box_tag 'note_changed', 1, @user.pref[:note_changed] %>
+<%end%>
+
+</p>
+
+
+
+</fieldset>

@@ -1,0 +1,6 @@
+# English strings go here
+field_mail_notification_peruser: "Email notifications for Issues"
+  label_issue_status_changed: "Only status changes"
+  label_issue_issue_changed : "All issue changes"
+  label_issue_priority_changed: "Only priority changes"
+  label_issue_note_changed: "Only note changes"
