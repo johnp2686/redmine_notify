@@ -1,11 +1,17 @@
-Email notification per user - Redmine plugin
 
+Email notification per user - Redmine plugin
+--------------------------------------------
 This plugin allows you to disable the notification of the issue changes for user level
 
 The default values for per user notification fields should be the following:
 
 All issues changes - unchecked Only status changes - checked Only priority changes - checked Only notes added - checked
 
-Installation
+Installation notes
+------------------
 
-github.com/johnp2686/Email_notification_plugin.git 
+Step1 : Download last version from https://github.com/johnp2686/redmine_notify.git
+
+Step2 : rake redmine:plugins:migrate RAILS_ENV=production,
+
+Step3 : Restart your Redmine server.
